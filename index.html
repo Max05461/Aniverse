@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniverse - Popular Anime</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            900: '#312e81',
+                        },
+                        dark: {
+                            800: '#1e1e2f',
+                            900: '#13131f',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-dark-900 text-gray-100 font-sans min-h-screen flex flex-col">
+    <div id="navbar"></div>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        
+        <!-- Airing Section -->
+        <section class="mb-16">
+            <div class="flex justify-between items-end mb-6 border-b border-slate-800 pb-3">
+                <div>
+                    <h2 class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-emerald-500 mb-1"><i class="fa-solid fa-fire text-orange-500 mr-2 text-2xl"></i> Currently Airing</h2>
+                    <p class="text-gray-400 text-sm">Top shows this season.</p>
+                </div>
+            </div>
+            
+            <div id="airing-loading" class="flex justify-center items-center py-10">
+                <div class="loader w-10 h-10 border-[3px]"></div>
+            </div>
+
+            <div id="airing-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 hidden">
+                <!-- Airing Anime Cards -->
+            </div>
+        </section>
+
+        <!-- Top Rated Section -->
+        <section>
+            <div class="flex justify-between items-end mb-6 border-b border-slate-800 pb-3">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-500 to-purple-500 mb-1"><i class="fa-solid fa-crown text-yellow-500 mr-2 text-2xl"></i> Top Rated Anime</h2>
+                    <p class="text-gray-400 text-sm">Discover the most popular anime of all time.</p>
+                </div>
+            </div>
+
+            <div id="top-loading" class="flex justify-center items-center py-20">
+                <div class="loader"></div>
+            </div>
+
+            <div id="anime-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 hidden">
+                <!-- Anime Cards injected here -->
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/components.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

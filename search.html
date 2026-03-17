@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Anime - Aniverse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 900: '#312e81' },
+                        dark: { 800: '#1e1e2f', 900: '#13131f' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-dark-900 text-gray-100 font-sans min-h-screen flex flex-col">
+    <div id="navbar"></div>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="max-w-2xl mx-auto text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-brand-500 to-purple-500">Search the Universe</h1>
+            <form id="search-form" class="relative">
+                <input type="text" id="search-input" placeholder="e.g. Naruto, Attack on Titan..." required autocomplete="off"
+                       class="w-full bg-slate-800 border border-slate-700 text-white rounded-full py-4 pl-6 pr-14 focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/50 transition-all text-lg shadow-lg">
+                <button type="submit" class="absolute right-2 top-2 bottom-2 aspect-square bg-brand-600 hover:bg-brand-500 rounded-full text-white transition-colors flex items-center justify-center">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <p id="search-stats" class="text-gray-400 mt-4 text-sm hidden"></p>
+        </div>
+
+        <div id="loading" class="flex justify-center items-center py-10 hidden">
+            <div class="loader"></div>
+        </div>
+
+        <div id="initial-state" class="text-center py-20 text-slate-500">
+            <i class="fa-solid fa-satellite-dish text-6xl mb-4 opacity-50"></i>
+            <p class="text-lg">Enter an anime title to start searching.</p>
+        </div>
+
+        <div id="anime-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 hidden">
+            <!-- Search Results injected here -->
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/components.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
