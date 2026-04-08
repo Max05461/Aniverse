@@ -2,7 +2,7 @@
 
 A modern, responsive web application for discovering and exploring anime. Built with Vanilla HTML, CSS (Tailwind), and JavaScript.
 
-## 🚀 Features
+##  Features
 
 - **Home Page**: Displays "Currently Airing" and "Top Rated" anime sections.
 - **Search (Search the Universe)**: Real-time search functionality to find specific anime titles.
@@ -15,7 +15,7 @@ A modern, responsive web application for discovering and exploring anime. Built 
 
 ---
 
-## 🛠️ Built With
+##  Built With
 
 - **HTML5** & **CSS3**
 - [Tailwind CSS (via CDN)](https://tailwindcss.com/) - Utility-first CSS framework for rapid UI styling.
@@ -24,7 +24,7 @@ A modern, responsive web application for discovering and exploring anime. Built 
 
 ---
 
-## 📡 API Reference
+##  API Reference
 
 This project is powered by the **[Jikan API (v4)](https://jikan.moe/)**, which is an unofficial, open-source REST API for MyAnimeList.net.
 
